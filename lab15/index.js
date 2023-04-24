@@ -24,14 +24,14 @@ function createListHtml(list) {
     const div = document.createElement("div");
     div.classList.add("form");
 
-    const fullscreen = document.createElement("div");
-    fullscreen.classList.add("fullscreen");
-    div.appendChild(fullscreen);
-
     const username = document.createElement("div");
     username.classList.add("text");
     username.textContent = list[i].user.username;
     div.appendChild(username);
+
+    const fullscreen = document.createElement("div");
+    fullscreen.classList.add("fullscreen");
+    div.appendChild(fullscreen);
 
     const img = document.createElement("img");
     img.src = list[i].user.profile_image.small;
@@ -44,7 +44,6 @@ function createListHtml(list) {
       const photo = document.createElement("img");
       photo.src = list[i].user.profile_image.large;
       fullscreen.appendChild(photo);
-
       const backButton = document.createElement("button");
       backButton.textContent = "Back";
       backButton.classList.add("back-button");
